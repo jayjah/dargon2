@@ -173,10 +173,7 @@ class LocalBinder {
   /// NDK set library as according to Flutter's guide on ffi
   String _getPath() {
     var relativePath = './lib/src/blobs';
-    if (Platform.isMacOS) {
-      var relativePath = 'lib/src/blobs';
-      return '$relativePath/libargon2-darwin.dylib';
-    }
+    if (Platform.isMacOS) return '$relativePath/libargon2-darwin.dylib';
     if (Platform.isLinux) return '$relativePath/libargon2-linux.so';
     if (Platform.isWindows) return r'lib\src\blobs\libargon2-win.dll';
     return 'libargon2-arm.so';
