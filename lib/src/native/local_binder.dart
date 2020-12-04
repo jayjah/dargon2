@@ -174,7 +174,7 @@ class LocalBinder {
   String _getPath() {
     var relativePath = './lib/src/blobs';
     if (Platform.isMacOS) {
-      relativePath = '/lib/src/blobs';
+      relativePath = '../blobs';
       return '$relativePath/libargon2-darwin.dylib';
     }
     if (Platform.isLinux) return '$relativePath/libargon2-linux.so';
